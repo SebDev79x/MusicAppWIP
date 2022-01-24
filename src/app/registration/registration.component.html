@@ -1,0 +1,75 @@
+<div class="wrapper">
+
+<h1 class="title mt-5">Vous inscrire ?</h1>
+<span>{{message1}}</span>
+<span>{{message2}}</span>
+
+<div class="container registerContainer">
+  <div class="row">
+    <div class="col-md">
+      <div *ngIf="registrationOk === true" style="background-color: antiquewhite;">BIEN JOUE</div>
+      <form action="" [formGroup]="addUser" class="form">
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="">Votre pseudo :</mat-label>
+            <!-- (keyup)="verifyIfLoginUserAlreadyExists(theNameTypedByUser)" dans div this username... *ngIf="addUser.controls['username'].errors?.usernameExists"-->
+            <input matInput (keyup)="verifyIfLoginUserAlreadyExists(userName)"
+               formControlName="userName" type="text" name="userName"
+              class="form-control" autocomplete="off">
+
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">
+            <div *ngIf="userName?.errors?.required">Un pseudo est requis</div>
+            <div *ngIf="userName?.errors?.minlength">
+              Le nom doit être composé d'au minimum 3 caractères</div>
+            <div *ngIf="userName?.errors?.maxlength">
+              Le nombre de caractères est trop élevé ! </div>
+          <!--   <div class="has-text-danger">
+              This username is already taken!
+            </div> -->
+          </div>
+        </div>
+   <div class="form-group">
+          <mat-form-field>
+
+            <mat-label for="">Votre email :</mat-label>
+            <input matInput (keyup)="verifyIfEmailUserAlreadyExists(email)"
+            formControlName="email" type="email" name="email" class="form-control" autocomplete="off"
+            >
+
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div *ngIf="email?.errors?.required">Votre adresse mail est requise</div>
+            <div *ngIf="email?.errors?.email">
+              Le format n'est pas valide...</div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+
+            <mat-label for="">Votre mot de passe :</mat-label>
+            <input matInput formControlName="userPassword" type="text" name="userPassword" class="form-control"
+              autocomplete="off">
+
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="userPassword?.invalid && (userPassword?.dirty || userPassword?.touched)">
+            <div *ngIf="userPassword?.errors?.required">Un mot de passe est requis</div>
+            <div *ngIf="userPassword?.errors?.minlength">
+              Le mot de passe doit être composé d'au minimum 3 caractères</div>
+            <div *ngIf="userPassword?.errors?.maxlength">
+              Le nombre de caractères est trop élevé ! </div>
+          </div>
+        </div>
+
+        <div class="divWrapsButton">
+          <button type="button" mat-raised-button class="btn btn1 mb-1" (click)="registerUser($event)">Valider</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[formGroup]="" formControlName="userPassword" formControlName="userName" -->
+</div>
+</div>

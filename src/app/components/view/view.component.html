@@ -1,0 +1,74 @@
+<!-- Bouton retour haut de page -->
+<div>
+  <p style="color:red"></p>
+</div>
+<!-- <section style="color:red;background-color: blue;text-align: center;">TOM ALICE ANNA</section>
+<p style="color:green;background-color: yellow;">TOM ALICE ANNA</p> -->
+<!-- <div><p style="color:yellow; background-color: blue;">AURORE</p></div>
+ -->
+<!-- Pagination -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
+      <label for="search">Rechercher un groupe ? </label>
+
+      <input type="text" #search name="search" id="" [(ngModel)]="wordToFilterBands">
+    </div>
+  </div>
+</div>
+<!-- Div en cas de résultat négatif *ngIf="picToFillUpPage==true"-->
+<div *ngIf="picToFillUpPage" class="container-fluid homePic">
+  <div class="row">
+    <div class="col">
+      <!--center;  background-size: cover; j'ai retiré style="height:400px;width:700px" de img-->
+      <!--             <img class="" src="../assets/img/reddevil.jpg"  alt="Image tête de mort diabolique">
+ -->
+      <div class="" style="color:white;">
+        <p>OUPS ! Aucun résultat...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pas de tag Alt ici car c'est un attribut HTML, b.image ou url est une propriété CSS
+https://christianheilmann.com/2009/02/25/so-how-do-you-add-alternative-text-to-background-images/
+-->
+<!--paginate: {itemsPerPage:8,currentPage : page,totalItems:totalLength}  style="background: url({{imagePath}}{{mydata.name}}) center;  background-size: cover; display:block;"-->
+<!-- TEST 19/06 15:45 -->
+<div class="container-fluid wrapper" *ngFor="let mydata of filteredBands |
+  filter : wordToFilterBands |
+  paginate: {itemsPerPage:8,currentPage : page,totalItems:totalLength} ; let i = index">
+
+  <div class="card2" #card2 [@launchSlideToLeftCard2]="states[i]" (click)="[toggleDivs(i)]"
+    [@launchSlideToUpCard2]="states[i]" (click)="[toggleDivsY(i)]" (window:resize)="onWindowResize($event, i)"
+    style="background-color:black;border:2px solid red">
+    <!--  [(ngModel)]="mydata" #region isChecked(mydata.bandName)" in getcheckedboxes : $event, mydata  (change)="getCheckedBoxes2($event, mydata)"-->
+    <input type="checkbox" style="color:yellow" #checkbox name="{{mydata.bandId}}" value="{{mydata.bandId}}"
+    [(ngModel)]="mydata.fav"
+    class="checkbox" (change)="getCheckedBoxes2($event, mydata)">
+    <div class="card-title mt-5">
+      <h5 class="bandName">{{mydata.bandName}}</h5>
+    </div>
+  </div>
+  <div class="gap"></div>
+  <div class="card3" [@launchSlideToRightCard3]="states2[i]" (click)="[toggleDivsBack(i)]"
+    [@launchSlideToDownCard3]="states2[i]" (click)="[toggleDivsBackY(i)]"
+    style="background: url({{imagePath}}{{mydata.name}}) center;  background-size: cover; display:block;border:2px solid red">
+    <div class="container buttons">
+      <button type="button" mat-raised-button class="btn btn1 mt-5" (click)="getById(mydata)">Accéder ?</button>
+      <button *ngIf="userQuality !==  null " type="button" mat-raised-button class="btn btn2 mt-5"
+        (click)="onEdit(mydata)">Modifier ?</button>
+      <button *ngIf="mydata.name == 'genericRockPic.png' && userQuality !==  null " type="button" mat-raised-button
+        class="btn btn3 mt-5" (click)="addPic(mydata)">Ajouter photo ?</button>
+    </div>
+  </div>
+  <div class="gap"></div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

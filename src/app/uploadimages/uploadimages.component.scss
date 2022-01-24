@@ -1,0 +1,53 @@
+.container-fluid {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+label{
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+.picCol1 {
+  height: 600px;
+  background: url("../../assets/img/rockclub.jpg") center center no-repeat ;
+  width: 500px;
+  display: block;
+}
+.picCol2{
+  height: 600px;
+  width: 500px;
+  background: url("../../assets/img/rockclub.jpg") center center no-repeat ;
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .picCol2,.picCol1 {
+    display: none;
+
+  }
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+.form-group {
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:400px;
+}
+.btn1 {
+  background-color: black;
+  color: red;
+  font-family: "New Rocker", cursive !important;
+  margin-top: 40px;
+}
+h2 {
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+
+.ngx-pagination {
+  padding-left: 0;
+  padding-top: 15px;
+}
+ .pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+}
+
+.pagination ::ng-deep .ngx-pagination {
+text-align: center;
+}
+.ngx-pagination .disabled{
+  color:grey !important;
+}
+
+span.ng-star-inserted{
+  color:grey !important;
+}
+
+a.ng-star-inserted{
+  background-color: black;
+  color:red !important;
+
+}
+  // Carré/rectangle entourant le numéro de la page actuelle
+  .ngx-pagination .current{
+    background-color: red !important;
+  }
+  // Numéro de la page actuelle
+  .ngx-pagination .current span{
+    color:white !important;
+  }

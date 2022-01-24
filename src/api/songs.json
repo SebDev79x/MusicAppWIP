@@ -1,0 +1,112 @@
+{
+  "songs": [
+    {
+      "bandId": 1,
+      "songId": 1,
+      "title": "Stupid Girl",
+      "youtubeUrl": "https://www.youtube.com/watch?v=2GhPUAVgHZc"
+    },
+    {
+      "bandId": 1,
+      "songId": 2,
+      "title": "Push It",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Pmd3UiNfNkA"
+    },
+    {
+      "bandId": 1,
+      "songId": 3,
+      "title": "I think I'm paranoid",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ypr18UmxOas"
+    },
+    {
+      "bandId": 2,
+      "songId": 1,
+      "title": "Bundy",
+      "youtubeUrl": "https://www.youtube.com/watch?v=nKgNMiy2p5Q"
+    },
+    {
+      "bandId": 2,
+      "songId": 2,
+      "title": "Most wanted Cowboy",
+      "youtubeUrl": "https://www.youtube.com/watch?v=IVVMjGNIrcg"
+    },
+    {
+      "bandId": 2,
+      "songId": 3,
+      "title": "Deep In",
+      "youtubeUrl": "https://www.youtube.com/watch?v=5CfkOOi4_mU"
+    },
+    {
+      "bandId": 3,
+      "songId": 1,
+      "title": "Killing in the name",
+      "youtubeUrl": "https://www.youtube.com/watch?v=bWXazVhlyxQ"
+    },
+    {
+      "bandId": 3,
+      "songId": 2,
+      "title": "Fistful of steel",
+      "youtubeUrl": "https://www.youtube.com/watch?v=4oMTH10nrxk"
+    },
+    {
+      "bandId": 3,
+      "songId": 3,
+      "title": "People of the sun",
+      "youtubeUrl": "https://www.youtube.com/watch?v=C_YtCpC12Kg"
+    },
+    {
+      "bandId": 4,
+      "songId": 1,
+      "title": "For those about to Rock",
+      "youtubeUrl": "https://www.youtube.com/watch?v=NCwUirA35HU"
+    },
+    {
+      "bandId": 4,
+      "songId": 2,
+      "title": "Rock'n Roll train",
+      "youtubeUrl": "https://www.youtube.com/watch?v=RHpClGAAvpg"
+    },
+    {
+      "bandId": 4,
+      "songId": 3,
+      "title": "If you want blood (You got it !)",
+      "youtubeUrl": "https://www.youtube.com/watch?v=6EWqTym2cQU"
+    },
+    {
+      "bandId": 5,
+      "songId": 1,
+      "title": "Drink the Elixir",
+      "youtubeUrl": "https://www.youtube.com/watch?v=vV8QvsC68lk"
+    },
+    {
+      "bandId": 5,
+      "songId": 2,
+      "title": "Insomnia",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ydFgIIioo2Y"
+    },
+    {
+      "bandId": 5,
+      "songId": 3,
+      "title": "Motorbike to Heaven",
+      "youtubeUrl": "https://www.youtube.com/watch?v=oHyye6ADYYA"
+    },
+    {
+      "bandId": 6,
+      "songId": 1,
+      "title": "idiot prayer",
+      "youtubeUrl": "https://www.youtube.com/watch?v=FB5UripVLdc"
+    },
+    {
+      "bandId": 6,
+      "songId": 2,
+      "title": "Stagger Lee",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Nbe5RERDh4k"
+    },
+    {
+      "bandId": 6,
+      "songId": 3,
+      "title": "Jubilee Street",
+      "youtubeUrl": "https://www.youtube.com/watch?v=QyRFAw5La38"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+.container-fluid {
+/*   background: url("../../../assets/img/otr.jpg") no-repeat center fixed;
+ */  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+}
+
+
+/* mat-label {
+  color: black;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* button {
+  border: 2px solid black !important;
+} */
+
+.btn1 {
+  background-color: black;
+  color: red;
+  font-family: "New Rocker", cursive !important;
+  border: 1px solid red !important;
+}
+
+.btn2 {
+  background-color: red;
+  color: black;
+  font-family: "New Rocker", cursive !important;
+}
+
+.btn3 {
+  background-color: black;
+  color: white;
+  font-family: "New Rocker", cursive !important;
+  border: 1px solid red !important;
+
+}
+
+/* .buttonsRow {
+  margin: 0;
+  padding: 0;
+} */
+.checkbox{
+ position:absolute;
+ right:0;
+ bottom:0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card2,
+.card3 {
+  width: 40%;
+}
+.bandName {
+  color: rgb(251, 251, 251);
+  font-family: "New Rocker", cursive !important;
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.card-title {
+  text-align: center;
+  color: red;
+}
+.card2:hover,
+.card3:hover {
+  cursor: pointer;
+}
+.card2 {
+  height: 400px;
+  position: absolute;
+  z-index: 2;
+}
+.btnPic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+}
+.card3 {
+  height: 400px;
+  z-index: 1;
+  background-color: rgb(47, 44, 44);
+
+
+}
+.buttons{
+  display: flex;
+  height:100%;
+ align-items: flex-end;
+ justify-content: center;
+}
+.gap {
+  height: 120px;
+}
+// Ici on réduit de 20% la width des card2 et card3 tant que le device ne dépasse pas 768px de largeur
+@media only screen and (max-width: 768px) {
+  .card2,
+  .card3 {
+    width: 80%;
+  }
+
+  /* .gap{
+height:200px;
+}  */
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* smartphone en mode portrait */
+  .card2,
+  .card3 {
+    width: 90%;
+  }
+  .bandName {
+    font-size: 35px;
+  }
+}
+/* .searchInput {
+  z-index: 2;
+} */
+/**/
+/* .mat-form-field-underline{
+  background-color: red !important;
+
+} */
+.homePic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 769px) {
+  img {
+    height: 400px;
+    width: 700px;
+  }
+  .homePic {
+    min-height: 540px;
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  img {
+    height: 150px;
+    width: 300px;
+  }
+  .homePic {
+    min-height: 534px;
+    font-size:30px;
+    text-align: center;
+  }
+}
+// Avec pagination, effets de bord sur les span Material
+ .btn1 span.mat-button-wrapper{
+   color:red !important;
+ }
+ .btn2 span.mat-button-wrapper{
+  color:black !important;
+}
+
+// Custom pagination
+ .ngx-pagination {
+  padding-left: 0;
+  padding-top: 15px;
+}
+ .pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+}
+
+.pagination ::ng-deep .ngx-pagination {
+text-align: center;
+}
+/* span{
+  color:red !important;
+  } */
+  .ngx-pagination .disabled{
+    color:grey !important;
+  }
+
+  span.ng-star-inserted{
+    color:grey !important;
+  }
+
+  a.ng-star-inserted{
+    background-color: black;
+    color:red !important;
+
+  }
+
+  // Carré/rectangle entourant le numéro de la page actuelle
+  .ngx-pagination .current{
+    background-color: red !important;
+  }
+  // Numéro de la page actuelle
+  .ngx-pagination .current span{
+    color:white !important;
+  }
+  label {
+    background-color: black !important;
+    color:red;
+  }
+  input{
+    font-size: large;
+
+  }
+  input:focus {
+    outline: none !important;
+    border:1px solid red;
+}
+ /*  .searchInput{
+    margin-bottom: 100px;
+    background-color: yellowgreen;
+  } */
+/* .ngx-pagination .pagination-previous a::before, .ngx-pagination .pagination-previous.disabled::before {
+    content: none !important;
+    display: inline-block;
+    margin-right: 0.5rem;
+} */
+/*
+ .pagination ::ng-deep .ngx-pagination .current {
+  background-color: white;
+}
+
+
+
+
+  :disabled{
+background: transparent;
+  }
+ .ngx-pagination .current{
+  background-color: red !important;
+}
+
+.current{
+  color:yellow !important;
+  background-color: yellow !important;
+}
+
+.ngx-pagination .disabled:hover{
+  background: transparent;
+}
+.pagination-previous ng-star-inserted .disabled{
+  background: transparent;
+
+}
+.ngx-pagination .disabled{
+  display: none;
+
+}
+.pagination-next.disabled::after{
+content: none;
+}
+ */

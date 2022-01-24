@@ -1,0 +1,112 @@
+
+
+<!-- <h2 *ngIf="successMessage===true?victoryMessage:failureMessage"></h2>
+ -->
+<!-- <div *ngIf="successMessage===true; else failureMessage">{{victoryMessage}}</div>
+<ng-template #failureMessage>Content to render when condition is false.</ng-template> -->
+<div class="wrapper">
+<div class="container messageContainer">
+  <div class="row">
+    <div class="col">
+      <div *ngIf="victoryMessage===true">Formulaire validé ! :) </div>
+      <div #messageContainer *ngIf="failureMessage===true">Le formulaire semble hélas invalide ! </div>
+      <span>{{message1}}</span>
+    </div>
+  </div>
+</div>
+<!--
+<ng-template #victoryMessage>victoryMessage</ng-template>
+<ng-template #failureMessage>rrrr</ng-template> -->
+<div *ngIf="imageComponentIsDisplayed == false" class="container">
+  <div class="row">
+    <div class="col-md">
+      <form action="" [formGroup]="addBand" class="form">
+        <div class="form-group">
+          <h1 class="h1BandClass">AJOUTER UN GROUPE ?</h1>
+
+          <mat-form-field>
+            <mat-label for="bandName">Groupe : </mat-label>
+            <input (keyup)="checkIfbanNameAlreadyExist(bandName)" matInput type="text" formControlName="bandName" name="bandName" id="bandName" class="form-control"
+              required />
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="bandName?.invalid && (bandName?.dirty || bandName?.touched)">
+            <div *ngIf="bandName?.errors?.required">Un nom est requis</div>
+            <div *ngIf="bandName?.errors?.minlength">
+              Le nom doit être composé d'au minimum 3 caractères</div>
+            <div *ngIf="bandName?.errors?.maxlength">
+              Le nombre de caractères est trop élevé ! </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="bandName">Chanteur/se : </mat-label>
+            <input matInput type="text" formControlName="singerName" name="singerName" id="singerName"
+              class="form-control" required />
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="singerName?.invalid && (singerName?.dirty || singerName?.touched)">
+            <div *ngIf="singerName?.errors?.required">
+              Un nom est requis</div>
+            <div *ngIf="singerName?.errors?.minlength">
+              Le nom doit être composé d'au minimum 3 caractères</div>
+            <div *ngIf="singerName?.errors?.maxlength">
+              Le nombre de caractères est trop élevé ! </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label for="year">Naissance du groupe : </mat-label>
+            <input matInput type="text" formControlName="year" name="year" id="year" class="form-control"
+              [pattern]="yearValidationPattern" required />
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="year?.errors?.pattern">
+            L'année saisie est invalide !</div>
+          <div class="errorMessage" *ngIf="year?.invalid && (year?.dirty || year?.touched)">
+            <div *ngIf="year?.errors?.required">
+              Veuillez saisir une année s'il vous plaît :)</div>
+            <div *ngIf="year?.errors?.minlength">
+              Une année est composée de 4 chiffres...</div>
+            <div *ngIf="year?.errors?.maxlength">
+              Une année est composée de 4 chiffres...</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="style">Style musical : </mat-label>
+            <input matInput type="text" formControlName="style" name="style" id="style" class="form-control" required />
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="style?.invalid && (style?.dirty || style?.touched)">
+
+            <div *ngIf="style?.errors?.required">
+              Veuillez saisir un style musical s'il vous plaît :)</div>
+            <div *ngIf="style?.errors?.minlength">
+              Le style doit être composé de 3 caractères minimum</div>
+            <div *ngIf="style?.errors?.maxlength">
+              Le nombre de caractères est trop élevé !</div>
+          </div>
+        </div>
+        <!--   <div class="form-group">
+          <label for="style">Style musical : </label>
+          <input type="text" formControlName="style" name="style" id="style" class="form-control">
+        </div> -->
+        <!-- #region ,formIsValid()-->
+        <div class="divWrapsButton">
+          <button type="button" mat-raised-button class="btn btn1" (click)="submitBand($event)">Ajouter un groupe
+            ?</button>
+          <button type="button" mat-raised-button class="btn btn2" (click)="resetForm()">Annuler
+            ?</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <h4 *ngIf="imageComponentIsDisplayed == true">Ajouter une image ? (optionnel)</h4>
+<div *ngIf="imageComponentIsDisplayed == true" class="divWrapsButton mb-5">
+  <button type="button" mat-raised-button class="btn btn1" (click)="toggleComponentUploadImages()">Ajouter une photo ?
+    ?</button>
+</div> -->
+<!-- <router-outlet>
+</router-outlet> -->
+<!-- <app-uploadimages *ngIf="showComponentUploadImages" [childMessage]="parentMessage"></app-uploadimages>
+ -->
+</div>

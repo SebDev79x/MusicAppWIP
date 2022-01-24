@@ -1,0 +1,69 @@
+.row{
+  margin: 0;
+  padding:0;
+}
+
+.internalInfo {
+  display: none;
+}
+
+.h1BandClass,h4,h5{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+/* .spanBandClass{
+  display: none;
+
+} */
+.form-group {
+  text-align: center;
+}
+input {
+  width: 100%;
+}
+.matInput {
+  width: 100%;
+}
+.btn1 {
+  background-color: black;
+  color: red;
+  font-family: "New Rocker", cursive !important;
+}
+.btn2 {
+  background-color: white;
+  color: red;
+  font-family: "New Rocker", cursive !important;
+}
+
+.h1BandContainer{
+  margin-bottom: 10px;
+
+}
+.messageContainer{
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  color: red;
+}
+@media only screen and (max-width: 768px) {
+  .messageContainer {
+    width: 80%;
+  }
+}
+.divWrapsButton{
+  display: flex;
+  justify-content: center;
+}
+.errorMessage{
+  color: red;
+
+}
+/* .subMessage{
+  display:none;
+
+} */
+

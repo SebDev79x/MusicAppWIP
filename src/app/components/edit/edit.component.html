@@ -1,0 +1,141 @@
+<!-- <div class="container">
+<div class="row">
+  <div class="col-md-8  offset-md-2">
+<h3>Vos modifications en cours (non enregistrées) :
+</h3>
+
+<p>{{changeBandName}}</p>
+<p>{{changeSingerName}}</p>
+<p>{{changeYear}}</p>
+<p>{{changeStyle}}</p>
+  </div>
+
+</div>
+</div> -->
+
+<div class="wrapper">
+<h1>MODIFIER CE GROUPE</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <form action="" [formGroup]="addBand" class="form">
+        <!--   <div class="form-group">
+          <label for="bandId">Numéro du groupe : </label>
+          <input type="number" formControlName="bandId" name="bandId" id="bandId" class="form-control">
+        </div> -->
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="bandName">Groupe : </mat-label>
+            <input matInput type="text" formControlName="bandName" name="bandName" id="bandName" class="form-control" [(ngModel)]="changeBandName"
+              required>
+          </mat-form-field>
+        </div>
+
+        <!--    <div class="form-group">
+          <label for="bandName">Groupe : </label>
+          <input type="text" formControlName="bandName" name="bandName" id="bandName" class="form-control" required>
+        </div> -->
+        <!--  <div class="alert alert-danger" *ngIf="addBand.get('bandName').hasError && addBand.get('bandName').touched">Veuillez saisir un nom de groupe s'il vous plaît !</div>
+        <div class="alert alert-danger" *ngIf="addBand.get('bandName').errors?.minLength && addBand.get('bandName').touched">Le nombre de caractères semble invalide...</div>
+
+     <div class="alert alert-danger" *ngIf="addBand.get('bandName').errors?.maxLength && addBand.get('bandName').touched">Le nombre de caractères semble trop élevé...</div>
+ -->
+        <!--    <div class="alert alert-danger" *ngIf="bandName.errors?.maxlength || bandName.errors?.minlength">
+      Le nombre de caractères semble invalide !
+ </div> -->
+      <!--   <div *ngIf="bandName.invalid && (bandName.dirty || bandName.touched)" class="alert alert-danger">
+          <div *ngIf="bandName.errors.required">
+            Un nom est requis</div>
+          <div *ngIf="bandName.errors?.minlength">
+            Le nom doit être composé d'au minimum 3 caractères</div>
+          <div *ngIf="bandName.errors?.maxlength">
+            Le nombre de caractères est trop élevé ! </div>
+        </div> -->
+
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="bandName">Chanteur/se : </mat-label>
+            <input matInput type="text" formControlName="singerName" name="singerName" id="singerName"
+              class="form-control" [(ngModel)]="changeSingerName" required>
+          </mat-form-field>
+        </div>
+
+     <!--    <div *ngIf="singerName?.invalid && (singerName?.dirty || singerName?.touched)" class="alert alert-danger">
+          <div *ngIf="singerName.errors.required">
+            Un nom est requis</div>
+          <div *ngIf="singerName.errors?.minlength">
+            Le nom doit être composé d'au minimum 3 caractères</div>
+          <div *ngIf="singerName.errors?.maxlength">
+            Le nombre de caractères est trop élevé ! </div>
+        </div> -->
+
+    <!--     <div class="form-group">
+          <mat-form-field>
+            <mat-label for="year">Année de création : </mat-label>
+            <input matInput type="text" formControlName="year" name="year" id="year" class="form-control" required>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <label for="year">Année de création : </label>
+          <input type="text" formControlName="year" name="year" id="year" class="form-control">
+        </div>
+        <div *ngIf="year.invalid && (year.dirty || year.touched)" class="alert alert-danger">
+          <div *ngIf="year.errors.required">
+            Une année est requise</div>
+          <div *ngIf="year.errors?.minlength || year.errors?.maxlength">
+            L'année doit être composée de 4 caractères</div>
+        </div> -->
+        <div class="form-group">
+
+          <mat-form-field appearance="fill">
+            <mat-label for="year">Naissance du groupe : </mat-label>
+            <input matInput type="text" formControlName="year" name="year" id="year" class="form-control" [(ngModel)]="changeYear" required>
+
+          <!-- #docregion toggle -->
+           <!--  <input matInput [matDatepicker]="picker" formControlName="year" name="year" id="year" class="form-control" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker> -->
+          <!-- #enddocregion toggle -->
+          </mat-form-field>
+        </div>
+      <!--   <div *ngIf="year?.invalid && (year?.dirty || year?.touched)" class="alert alert-danger">
+
+          <div *ngIf="year.errors.required">
+            Veuillez saisir une année s'il vous plaît :)</div>
+          <div *ngIf="year.errors?.minlength">
+            Le style doit être composé de 3 caractères minimum</div>
+        </div>
+        <div *ngIf="year.errors?.maxlength">
+          Le nombre de caractères est trop élevé !</div>
+        <div *ngIf="year.invalid && (year.dirty || year.touched)" class="alert alert-danger">
+        </div> -->
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="style">Style musical : </mat-label>
+            <input matInput type="text" formControlName="style" name="style" id="style" class="form-control" [(ngModel)]="changeStyle" required>
+          </mat-form-field>
+        </div>
+        <!--   <div class="form-group">
+          <label for="style">Style musical : </label>
+          <input type="text" formControlName="style" name="style" id="style" class="form-control">
+        </div> -->
+        <!-- <div *ngIf="style?.invalid && (style?.dirty || style?.touched)" class="alert alert-danger">
+
+          <div *ngIf="style.errors.required">
+            Veuillez saisir un style musical s'il vous plaît :)</div>
+          <div *ngIf="style.errors?.minlength">
+            Le style doit être composé de 3 caractères minimum</div>
+        </div>
+        <div *ngIf="style.errors?.maxlength">
+          Le nombre de caractères est trop élevé !</div> -->
+
+        <button type="button" mat-raised-button class="btn btn1" (click)="updateBand()">Modifier ?</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <button type="button" mat-raised-button class="btn btn1"><a [routerLink]="['/view']">Retour</a></button>
+ -->
+</div>

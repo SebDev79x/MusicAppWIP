@@ -1,0 +1,21 @@
+
+h1,h2,h3 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  text-align: center;
+}
+input {
+  width: 100%;
+}
+.matInput {
+  width: 100%;
+}
+.divWrapsButton{
+  display: flex;
+  justify-content: center;
+}

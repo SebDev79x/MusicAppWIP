@@ -1,0 +1,148 @@
+{
+  "bands": [
+    {
+      "id": 1,
+      "image": "https://plus.lesoir.be/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2018/06/22/node_164165/22048873/public/2018/06/22/B9716117301Z.1_20180622134553_000+GDKBHVQ1C.1-0.jpg?itok=3EqV1gZ21529667960",
+      "description": "Rock Band",
+      "name": "Garbage",
+      "singer": "Shirley Manson",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "Stupid Girl",
+          "youtubeUrl": "https://www.youtube.com/watch?v=2GhPUAVgHZc"
+        },
+        {
+          "songId": 2,
+          "title": "Push It",
+          "youtubeUrl": "https://www.youtube.com/watch?v=Pmd3UiNfNkA"
+        },
+        {
+          "songId": 3,
+          "title": "I think I'm paranoid",
+          "youtubeUrl": "https://www.youtube.com/watch?v=ypr18UmxOas"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "https://www.nordicmetal.net/wp-content/uploads/2018/02/AnimalAlpha-header.jpg",
+      "description": "Alternative Metal Band",
+      "name": "Animal Alpha",
+      "singer": "Agnete Kjolsrud ",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "Bundy",
+          "youtubeUrl": "https://www.youtube.com/watch?v=nKgNMiy2p5Q"
+        },
+        {
+          "songId": 2,
+          "title": "Most wanted Cowboy",
+          "youtubeUrl": "https://www.youtube.com/watch?v=IVVMjGNIrcg"
+        },
+        {
+          "songId": 3,
+          "title": "Deep In",
+          "youtubeUrl": "https://www.youtube.com/watch?v=5CfkOOi4_mU"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "https://www.metalzone.fr/wp-content/uploads/2019/11/rage-against-the-machine-768x504.jpg.webp",
+      "description": "Rap Metal Band",
+      "name": "Rage Against The Machine",
+      "singer": "Zack De La Rocha",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "Killing in the name",
+          "youtubeUrl": "https://www.youtube.com/watch?v=bWXazVhlyxQ"
+        },
+        {
+          "songId": 2,
+          "title": "Fistful of steel",
+          "youtubeUrl": "https://www.youtube.com/watch?v=4oMTH10nrxk"
+        },
+        {
+          "songId": 3,
+          "title": "People of the sun",
+          "youtubeUrl": "https://www.youtube.com/watch?v=C_YtCpC12Kg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "https://static.actu.fr/uploads/2020/01/ob-91fe8b-malcolm-young-1979-acdc-810x538.jpg",
+      "description": "Hard Rock Band",
+      "name": "AC/DC",
+      "singer": "Brian Johnson",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "For those about to Rock",
+          "youtubeUrl": "https://www.youtube.com/watch?v=NCwUirA35HU"
+        },
+        {
+          "songId": 2,
+          "title": "Rock'n Roll train",
+          "youtubeUrl": "https://www.youtube.com/watch?v=RHpClGAAvpg"
+        },
+        {
+          "songId": 3,
+          "title": "If you want blood (You got it !)",
+          "youtubeUrl": "https://www.youtube.com/watch?v=6EWqTym2cQU"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "https://coldturkeymusic.files.wordpress.com/2019/08/salad-saladt-by-tim-topple-2018.jpg?w=2000&h=1500&crop=1",
+      "description": "Alternative Rock Band",
+      "name": "Salad",
+      "singer": "Marijne Van Der Vlugt",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "Drink the Elixir",
+          "youtubeUrl": "https://www.youtube.com/watch?v=vV8QvsC68lk"
+        },
+        {
+          "songId": 2,
+          "title": "Insomnia",
+          "youtubeUrl": "https://www.youtube.com/watch?v=ydFgIIioo2Y"
+        },
+        {
+          "songId": 3,
+          "title": "Motorbike to Heaven",
+          "youtubeUrl": "https://www.youtube.com/watch?v=oHyye6ADYYA"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "https://www.abc.net.au/cm/rimage/10377848-16x9-large.jpg?v=4",
+      "description": "PostPunk, Indie, Rock Band",
+      "name": "Nick Cave and the Bad Seeds",
+      "singer": "Nick Cave",
+      "songs": [
+        {
+          "songId": 1,
+          "title": "idiot prayer",
+          "youtubeUrl": "https://www.youtube.com/watch?v=FB5UripVLdc"
+        },
+        {
+          "songId": 2,
+          "title": "Stagger Lee",
+          "youtubeUrl": "https://www.youtube.com/watch?v=Nbe5RERDh4k"
+        },
+        {
+          "songId": 3,
+          "title": "Jubilee Street",
+          "youtubeUrl": "https://www.youtube.com/watch?v=QyRFAw5La38"
+        }
+      ]
+    }
+  ]
+}

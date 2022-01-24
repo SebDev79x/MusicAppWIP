@@ -1,0 +1,27 @@
+
+.HomePic{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index:2;
+}
+@media only screen and (min-width: 769px) {
+  img{
+    height: 400px;
+    width:700px;
+  }
+.HomePic{
+  min-height: 691px;
+}
+ }
+@media only screen and (max-width: 768px) {
+  img{
+    height: 240px;
+    width:370px;
+  }
+  .HomePic{
+    min-height: 679px;
+  }
+}

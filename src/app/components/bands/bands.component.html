@@ -1,0 +1,100 @@
+<!-- <h1>Liste des chansons par groupe : REVOIR LE RESPONSIVE</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="listsSongs">
+        <mat-form-field>
+          <mat-select [(ngModel)]="selectedBand" (ngModelChange)='onBandSelected($event)'>
+
+            <mat-option *ngFor="let band of bands" [value]="band.id">{{band.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="col-md-4" *ngFor="let song of listSongs">
+          <a mat-stroked-button href="{{song.youtubeUrl}}" target="_blank" routerLinkActive="active">Ecouter
+            <span>{{song.title}}</span> ?</a>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-top:200px"></div>
+
+<h2>{{title}}</h2>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Recherchez un groupe : </mat-label>
+  <input type="text" name="" id="" [(ngModel)]="wordToFilterBands" matInput placeholder="Ex : AC/DC">
+
+</mat-form-field> -->
+<!-- <div class="ng-container">
+
+  <div class="row">
+    <div class="col-sm col-md-6 col-lg-6" *ngFor="let band of filteredBands">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Nom du groupe : {{band.name}}</h5>
+
+
+          <p class="card-text">Genre : {{band.description}}</p>
+          <div class="col-sm col-md-6 col-lg-6">
+            <img [src]="band.image" [routerLink]="['/bands', band.id]" style="float:right;height:200px;width:300px"
+              [title]="band.name" [alt]="band.name">
+          </div> -->
+
+          <!-- [routerLink]="['/{{band.songs}}']" routerLinkActive="router-link-active"
+          [routerLink]="{{band.songs}}" routerLinkActive="router-link-active" -->
+<!--           <p>Lead vocals : {{band.singer}}</p>
+            <div class="col-sm col-md-6 col-lg-6"> <button mat-raised-button>
+              <a color="warn" [routerLink]="['/bands', band.id]" routerLinkActive="active">Consulter ce groupe</a>
+            </button></div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->
+<!-- <div class="card-group" *ngFor="let band of filteredBands">
+  <div class="card">
+    <img [src]="band.image" [routerLink]="['/bands', band.id]" style="height:200px;width:300px"
+    [title]="band.name" [alt]="band.name" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Nom du groupe : {{band.name}}</h5>
+      <p class="card-text">Lead vocals : {{band.singer}}
+      This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <button mat-raised-button>
+        <a color="warn" [routerLink]="['/bands', band.id]" routerLinkActive="active">Consulter ce groupe</a>
+      </button>
+    </div>
+
+  </div>
+  <div class="card-footer">
+    <small class="text-muted">Last updated 3 mins ago</small>
+  </div>
+</div> -->
+
+
+<!-- <div class="center" *ngFor="let band of filteredBands">
+  <div class="property-card">
+    <a [routerLink]="['/bands', band.id]">
+      <div class="property-image" style="background-image: url({{band.image}});">
+        <div class="property-image-title">
+        </div>
+      </div></a>
+    <div class="property-description">
+      <h4>{{band.name}}</h4>
+      <h5 class="card-text">{{band.singer}}</h5>
+      <p>  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+    </div>
+
+
+  </div>
+</div> -->

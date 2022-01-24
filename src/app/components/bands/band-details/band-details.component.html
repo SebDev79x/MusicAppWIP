@@ -1,0 +1,43 @@
+<!-- <p>Ici vous trouverez tous les détails sur {{band.name}} </p>
+ --><!-- <p>Si ça ça marche, alors c'est bon !!  {{band.songs | json}} Je viens de modifier le fichier INterface IBand, voir les virgules ou les points-v</p>
+ <p>{{band | json}}</p> --><!--
+<div *ngFor="let items of band | keyvalue">
+
+  <div *ngFor="let obj of items.value | keyvalue">
+    <div *ngFor="let newItems of obj.value | keyvalue">
+      <p>{{newItems.value | json}}</p>
+
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let items of band.songs">
+
+
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Nom du groupe : {{band.name}} (ID = {{band.id}})</h5>
+
+          <p class="card-text">Genre : {{band.description}}</p>
+          <div><img [src]="band.image" style="float:right;height:200px;width:300px" [title]="band.name"
+              [alt]="band.name"></div>
+
+
+          <p>Chanteur/se : {{band.singer}}</p>
+          <a mat-raised-button color="primary" [routerLink]="['/bands']" routerLinkActive="active">Revenir à la liste
+            ?</a>
+          <a mat-raised-button color="warn" [routerLink]="['/home']" routerLinkActive="active">Revenir à l'accueil ?</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+ -->

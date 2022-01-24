@@ -1,0 +1,28 @@
+
+.registerContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+  width:50%;
+  margin-bottom: 10px;
+}
+
+.errorMessage{
+  color: red;
+
+}
+div.form-group{
+  background-color: white;
+  width:100%;
+}
+
+.form-group {
+  text-align: center;
+}
+.divWrapsButton{
+  display: flex;
+  justify-content: center;
+}

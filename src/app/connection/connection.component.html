@@ -1,0 +1,39 @@
+<div class="wrapper">
+<h2>Vous connecter ?</h2>
+<h3 *ngIf="isUserLoggedIn == false"> {{message}}</h3>
+<h3 *ngIf="isUserLoggedIn == true"> {{message}}</h3>
+<div class="container containerLogin">
+  <div class="row">
+    <div class="col">
+      <form action="" [formGroup]="loginForm" class="form">
+
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="email">Votre email : </mat-label>
+            <input autocomplete="off" matInput type="email" formControlName="email" name="email" id="email" class="form-control"
+              required />
+          </mat-form-field>
+          <div class="errorMessage" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div *ngIf="email?.errors?.required">Votre adresse mail est requise</div>
+            <div *ngIf="email?.errors?.email">
+              Le format n'est pas valide...</div>
+
+          </div>
+
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label for="userPassword">Votre mot de passe : </mat-label>
+            <input matInput type="password" formControlName="userPassword" name="userPassword" id="userPassword"
+              class="form-control" required />
+          </mat-form-field>
+
+        </div>
+        <div class="divWrapsButton">
+          <button type="button" mat-raised-button class="btn btn1" (click)="loginUser()">Se connecter ?</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

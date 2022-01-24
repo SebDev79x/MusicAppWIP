@@ -1,0 +1,29 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  z-index: 10000;
+
+ }
+ .show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+ }
+.btn{
+background-color: red;
+cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  img {
+   height:20px;
+   width:20px;
+    }
+}
+@media only screen and (min-width: 769px) {
+  img {
+    height:40px;
+    width:40px;
+     }
+}

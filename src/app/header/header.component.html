@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" #myEntireNavbar>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link firstALinkToThePast" [routerLink]="['/home']" routerLinkActive="active"> <img
+            src="assets/img/thunder.jpg" style="height:70px;width:70px" title="Accueil" alt="Logo électrique AC/DC">
+        </a>
+      </li>
+      <!-- ONGLET "Voir les groupes"-->
+      <li class="nav-item" *ngIf="!isViewRoute() || isBandViewRoute()">
+        <a class="nav-link" [routerLink]="['/view']" routerLinkActive="active">Voir les groupes </a>
+      </li>
+      <!-- ONGLET "Ajouter un groupe", uniquement visible d'un membre ADMIN-->
+      <li *ngIf="!isAddRoute()" class="nav-item">
+        <a *ngIf="qualityIsAdmin == 'admin'" class="nav-link" [routerLink]="['/add']" routerLinkActive="active">Ajouter
+          un groupe</a>
+      </li>
+      <!-- ONGLET "Liste des membres", uniquement visible d'un membre connecté-->
+      <li class="nav-item" *ngIf="!isUsersListRoute()">
+        <a *ngIf="isUserLoggedIn" class="nav-link" [routerLink]="['/usersList']" routerLinkActive="active">Liste des
+          membres</a>
+      </li>
+      <!--px-2 pour ajouter de l'espace entre les éléments, STATUT de l'utilisateur-->
+      <li class="nav-item px-2">
+        <p style="color: rgb(190, 180, 180);text-decoration: underline;text-underline-offset: 3px;">Statut :</p>
+      </li>
+      <li *ngIf="qualityIsAdmin == 'admin'" class="nav-item px-2">
+        <p style="color: white;">Membre Admin</p>
+      </li>
+      <li *ngIf="qualityIsAdmin == 'simpleUser'" class="nav-item px-2">
+        <p style="color: white;">Membre</p>
+      </li>
+      <li *ngIf="qualityIsAdmin == null " class="nav-item px-2">
+        <p style="color: white;">Visiteur</p>
+      </li>
+      <!-- PSEUDO, uniquement si utilisateur connecté-->
+      <li *ngIf="userName" class="nav-item px-2">
+        <p style="color: rgb(190, 180, 180);text-decoration: underline;text-underline-offset: 3px;">Pseudo :</p>
+      </li>
+      <li class="nav-item px-2">
+        <p style="color: white" *ngIf="userName">{{userName}}</p>
+      </li>
+      <!-- ONGLET "S'inscire", uniquement visible si utilisateur non connecté-->
+      <li class="nav-item" *ngIf="!isRegistrationRoute()">
+        <a *ngIf="!isUserLoggedIn" class="nav-link registration" [routerLink]="['/registration']"
+          routerLinkActive="active">S'inscrire</a>
+      </li>
+      <!-- ONGLET "Mon compte", uniquement visible si utilisateur connecté-->
+      <li class="nav-item" *ngIf="!isMyProfileRoute()">
+        <a *ngIf="isUserLoggedIn" class="nav-link" [routerLink]="['/profile/',userId]" routerLinkActive="active">Mon
+          compte</a>
+      </li>
+      <!-- #region à remettre une fois le souci du toggle résolu, 13/07 20:43 => *ngIf="!isConnectionRoute()"-->
+      <mat-slide-toggle *ngIf="!isConnectionRoute()" #slide [checked]="isChecked" style="color:yellow !important"
+        (change)="change($event)"></mat-slide-toggle>
+      <!-- BOUTON "Log In", uniquement visible si utilisateur non connecté-->
+      <li *ngIf="!isConnectionRoute()">
+        <button title="Se connecter ?" type="button" class="btn btn1 super" *ngIf="!isUserLoggedIn"
+          (click)="logIn()">Log In</button>
+        <!-- BOUTON "Log Out", uniquement visible si utilisateur connecté-->
+        <button title="Se déconnecter ?" type="button" class="btn btn2 super" *ngIf="isUserLoggedIn"
+          (click)="logOut()">Log
+          Out</button>
+      </li>
+    </ul>
+  </div>
+</nav>

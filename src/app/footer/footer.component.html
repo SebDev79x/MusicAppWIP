@@ -1,0 +1,20 @@
+<div  #myEntireFooter class="footer text-center">
+
+
+      <button  style="margin-bottom: 15px;" *ngIf="isButtonDisplayed ==true" #buttonHome type="button" mat-raised-button class="btn mt-5" routerLink="/home">Accueil</button>
+      <p ><small>&copy; Copyright {{currentYear | date: 'yyyy':'fr-FR'}}, Man-On-The-Beach Corporation</small></p>
+
+</div>
+<!-- <div  #myEntireFooter class="container-fluid footer text-center"
+[ngStyle]="isButtonDisplayed ==true?{'position':'relative'}:{'position' :'absolute','bottom':0}">
+
+  <div class="row">
+    <div class="col">
+      <p>Ici d'autres infos à venir et revoir cette histoire de footer Carpentier !</p>
+      <button  *ngIf="isButtonDisplayed ==true" #buttonHome type="button" mat-raised-button class="btn mt-5" routerLink="/home">Accueil</button>
+    </div>
+  </div>
+</div> -->
+        <!--   [ngStyle]="route == '/login' ?{'position' :'absolute','bottom':0}:{'position' :'absolute','bottom':0}"
+       #myFooter   [ngStyle]="route == '/home' ?{'position' :'absolute','bottom':0}:{'position':'relative'}"
+ -->

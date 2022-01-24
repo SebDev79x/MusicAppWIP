@@ -1,0 +1,97 @@
+<div class="wrapper">
+<h2>MESSAGE erreur console si aucune image</h2>
+<!-- TEST -->
+<div class="superContainer">
+  <h1>{{oneBand.bandName}}</h1>
+  <div>
+    <p>Chanteur(se)(s) : {{oneBand.singerName}}</p>
+    <p>Groupe formé en {{oneBand.year}}</p>
+    <p>Style musical : {{oneBand.style}}</p>
+  </div>
+
+
+</div>
+
+<!-- <div class="buttonDiv">
+  <button type="button" mat-raised-button class="btn btn1" routerLink="/view">Retour ?</button>
+</div> -->
+<!-- <div class="container-fluid uselessContainer" *ngFor="let item of imagesList">
+  <div class="row">
+    <div class="col">
+
+      <img src="{{imagePath}}{{item.name}}" height="200" width="200">
+      <div class="imageInformations">
+      <p>Id du groupe : {{item.id_band}}
+      </p>
+      <p>Id de l'image : {{item.id}}
+      </p>
+      <p>Nom de l'image : {{item.name}}</p>
+    </div>
+    </div>
+  </div>
+</div> -->
+<h2>Choisir un album :</h2>
+<div class="superContainer">
+  <div class="row">
+    <div class="col">
+      <div class="listsSongs">
+        <mat-form-field>
+          <mat-select [(ngModel)]="selectedAlbum" (ngModelChange)="onAlbumSelected($event)">
+
+            <mat-option *ngFor="let album of albumsList" [value]="album.albumId">Album : {{album.albumName}} sorti en
+              {{album.yearOfRelease}}</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+        <div *ngFor="let songs of songsList">
+          <p>{{songs.songTitle}}</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="superContainer">
+  <h2>ALBUMS</h2>
+
+  <div *ngFor="let album of albumsList">
+
+    <p>{{album.yearOfRelease}}</p>
+    <p>{{album.albumName}}</p>
+    <p>{{album.id_band}}</p>
+
+  </div>
+</div> -->
+<!-- <div class="superContainer">
+  <h2>CHANSONS voir pour intégrer req à l'url (id album)</h2>
+  <div *ngFor="let song of songsList">
+
+    <p>{{song.songTitle}}</p>
+    <p>{{song.id_album}}</p>
+
+  </div>
+</div> -->
+<h2>Quelques images et/ou photos du groupe {{oneBand.bandName}} :</h2>
+
+<div class="bandCard mt-5" *ngFor="let item of imagesList">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <img src="{{imagePath}}{{item.name}}" class="img-fluid" />
+
+  </div>
+  <div class="card-body">
+    <p>ID de l'image : {{item.id}}</p>
+    <p>ID du groupe : {{item.id_band}}</p>
+
+    <p class="card-text">
+      Ajouter une description pour chaque image, ajouter input dans form ou espace commentaire(s) ici + en bdd
+    </p>
+  </div>
+</div>
+<div class="buttonDiv">
+
+  <button type="button" mat-raised-button class="btn btn1" routerLink="/view">Retour ?</button>
+</div>
+</div>

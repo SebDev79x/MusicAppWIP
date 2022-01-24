@@ -1,0 +1,110 @@
+.nav-link{
+  color: rgb(255, 0, 0) !important;
+}
+.firstALinkToThePast{
+  display: inline;
+  }
+.navbar-toggler-icon{
+ background-color: red !important;
+}
+// Pour éviter que la balise P ne soit décalée verticalement...
+ p {
+  line-height:50px;
+  margin:0;
+}
+a{
+  line-height:35px;
+}
+/* nav{
+  position: absolute;
+} */
+  @keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  .registration {
+     -webkit-animation: flickerAnimation 2s infinite;
+     -moz-animation: flickerAnimation 2s infinite;
+     -o-animation: flickerAnimation 2s infinite;
+      animation: flickerAnimation 2s infinite;
+  }
+  .btn1,.btn2 {
+    background-color: black;
+    color: red;
+    font-family: "New Rocker", cursive !important;
+    border: 1px solid red !important;
+  }
+  @media only screen and (min-width: 321px) and (max-width: 991px){
+    .navbar{
+      background-color: black !important;
+
+    }
+    .super {
+display: none;
+    }
+    .mat-slide-toggle{
+      display: block;
+
+    }
+
+  }
+/*   @media only screen and (min-width: 769px) and (max-width: 991px){
+    .super {
+      display: none;
+    }
+    .mat-slide-toggle{
+      display: block;
+
+    }
+    .navbar{
+      background-color: black !important;
+
+    }
+
+  } */
+
+  @media only screen and (min-width: 992px){
+    .super {
+      display: block;
+    }
+    .mat-slide-toggle{
+      display: none;
+
+    }
+    .navbar{
+      background-color: black !important;
+
+    }
+
+    }
+
+ .super{
+   margin:0;
+   margin-left:auto;
+line-height:39px;
+}
+nav ul li {
+  position: relative;
+}
+
+nav ul ul {
+  position: absolute;
+  width: 100%;
+}
+

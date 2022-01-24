@@ -1,0 +1,104 @@
+.uselessContainer div {
+	position: relative;
+}
+.uselessContainer div::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.uselessContainer div:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+.uselessContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageInformations{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+text-align: center;
+}
+.superContainer{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+margin-bottom: 50px;
+}
+.buttonDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+margin-bottom: 50px;}
+.btn1 {
+
+  border: 1px solid red !important;
+  background-color: white;
+  color: black;
+  font-family: "New Rocker", cursive !important;
+}
+img{
+    height:200px;
+   width:200px;
+}
+.bandCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+h2{
+  text-align: center;
+}
+h1{
+  font-size: 65px;
+  text-decoration: underline;
+margin-bottom: 50px;
+/* background-color: black;
+ */color: red;
+// % de la largeur de la fenêtre
+width:auto;
+}

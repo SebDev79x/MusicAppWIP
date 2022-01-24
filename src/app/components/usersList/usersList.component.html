@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <!--    <span style="color: red;" *ngIf="qualityIsAdmin == 'admin'">Membre connecté(ADMIN)</span>
+      <span style="color: green;" *ngIf="qualityIsAdmin == 'simpleUser'">Membre connecté</span>
+      <span style="color: blue;" *ngIf="qualityIsAdmin == null">Utilisateur non enregistré</span> -->
+  <div *ngIf="qualityIsAdmin == 'admin'" class="welcomeMessage">
+    <h1>Bonjour Super Admin "{{userName}}"</h1>
+    <p>Souhaitez-vous administrer quelque chose ce jour ? :)</p>
+    <p>Pour info, nous sommes le {{date | date:'EEEE':'':'fr-FR'}} {{date | date: 'dd/MM/yyyy':'fr-FR'}}.</p>
+  </div>
+  <h2>Liste des membres : </h2>
+
+  <div class="container  uselessClass">
+    <div class="youpi" *ngFor="let mydata of usersList">
+      <div>
+        <!--  <img
+    /> -->
+        <!-- dans img   src="{{imagePath}}{{item.name}}" height="200" width="200"      class="img-fluid"
+-->
+        <!-- <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a> -->
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title"><span style="font-size: 30px;">{{mydata.userName}}</span></h5>
+        <p class="card-text">
+
+        </p>
+        <p><span style="text-decoration: underline;">Statut</span> : {{mydata.quality}}</p>
+        <p><span style="text-decoration: underline;">Numéro</span> : {{mydata.userId}}</p>
+        <p *ngIf="qualityIsAdmin == 'admin'"><span style="text-decoration: underline;">Adresse mail</span> :
+          {{mydata.email}}</p>
+        <button *ngIf="qualityIsAdmin == 'admin'" type="button" mat-raised-button class="btn btn1 mt-5"
+          (click)="goToThisProfile(mydata)">Administrer ?</button>
+      </div>
+    </div>
+  </div>
+
+</div>
